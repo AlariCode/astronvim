@@ -8,6 +8,7 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
+    ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -22,7 +23,7 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" },
+    ["jk"] = { "<C-\\><C-n>", desc = "Terminal normal mode" },
   },
 }
